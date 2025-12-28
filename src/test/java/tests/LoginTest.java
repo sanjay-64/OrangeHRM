@@ -23,21 +23,15 @@ public class LoginTest {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Username
-        WebElement userName = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+        WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
         userName.clear();
         userName.sendKeys("Admin");
 
-        // Password
-        WebElement userPwd = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+        WebElement userPwd = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         userPwd.clear();
         userPwd.sendKeys("admin123");
 
-        // Login button
-        WebElement loginButton = wait.until(
-                ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
         loginButton.click();
 
         driver.quit();
