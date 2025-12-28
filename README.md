@@ -2,11 +2,12 @@
 
 
 
-\## Overview
+Overview
 
-This is a \*\*Maven-based Selenium Automation Framework\*\* using \*\*Java\*\* and \*\*TestNG\*\*.  
+This is a Maven-based Selenium Automation Framework developed using Java and TestNG.
+It follows the Page Object Model (POM) design pattern and is built to support scalable, maintainable, and reusable automated test execution for web applications.
 
-It is designed for web application testing with a clean \*\*Page Object Model (POM)\*\* structure, reusable utilities, and integration with Excel and ExtentReports for reporting.
+The framework supports Excel based test data handling, rich HTML reporting using ExtentReports, and automatic browser driver management through WebDriverManager.
 
 
 
@@ -14,25 +15,16 @@ It is designed for web application testing with a clean \*\*Page Object Model (P
 
 
 
-\## Tech Stack
+Tech Stack
 
-\- \*\*Java 17\*\*  
-
-\- \*\*Selenium 4.21.0\*\*  
-
-\- \*\*TestNG 7.9.0\*\*  
-
-\- \*\*Apache POI 5.2.5\*\* (for Excel handling)  
-
-\- \*\*ExtentReports 5.1.1\*\* (HTML test reports)  
-
-\- \*\*WebDriverManager 5.8.0\*\* (automatic driver management)  
-
-\- \*\*Maven\*\* (project \& dependency management)  
-
-\- \*\*GitHub\*\* (version control)
-
-
+Java 17
+Selenium 4.21.0
+TestNG 7.9.0
+Apache POI 5.2.5 (Excel handling)
+ExtentReports 5.1.1 (HTML reporting)
+WebDriverManager 5.8.0
+Maven
+GitHub
 
 ---
 
@@ -42,30 +34,50 @@ It is designed for web application testing with a clean \*\*Page Object Model (P
 
 
 
-SeleniumProject/
+Project Structure
 
-│
+SeleniumProject
 
-├─ src/main/java/com/automation/pages # Page classes
+src/main/java/com/automation/pages
+Contains all Page Object classes representing application screens
 
-├─ src/main/java/com/automation/utilities # Reusable utilities
+src/main/java/com/automation/utilities
+Contains reusable utility classes such as Excel reader, config reader, waits, and helpers
 
-├─ src/test/java/tests # TestNG test classes
+src/test/java/tests
+Contains TestNG test classes
 
-├─ pom.xml # Maven dependencies \& plugins
+pom.xml
+Manages all Maven dependencies and plugins
 
-└─ .gitignore # Ignored files
-
-
-
-
-
----
-
+.gitignore
+Defines files and folders excluded from Git
 
 
-\## How to Run Tests
 
+Framework Architecture
+
+This framework follows a Hybrid Automation approach using:
+
+Page Object Model for UI separation
+TestNG for test execution and grouping
+Maven for build and dependency management
+Utility driven architecture for reusability
+ExtentReports for result visualization
+
+How to Run the Tests
+
+Clone the repository
+
+git clone https://github.com/sanjay-64/OrangeHRM.git
+
+Navigate to the project directory
+
+cd OrangeHRM
+
+Execute the tests
+
+mvn clean test
 
 
 \### 1. Clone the repository
@@ -82,65 +94,34 @@ mvn clean test
 
 
 
-Features
+Key Features
 
-
-
-Page Object Model (POM) implemented
-
-
-
-Parallel execution support via TestNG testng.xml
-
-
-
-Excel data handling using Apache POI
-
-
-
-Configurable via BaseTest and utilities
-
-
-
+Page Object Model implementation
+Parallel execution support using TestNG
+Excel driven testing using Apache POI
+Centralized WebDriver management using BaseTest
+Automatic browser driver handling using WebDriverManager
+HTML reporting using ExtentReports
 Logging using Log4j2
+Reusable utilities for wait, config and data handling
 
 
 
 Recommended IDE
 
+Eclipse
+VS Code
 
-
-Eclipse or VS Code (both free and support Java + Maven projects)
-
-
+Both support Java, Maven, TestNG and Git integration.
 
 Notes
 
-
-
-Keep chromedriver updated for latest Chrome version or use WebDriverManager.
-
-
-
-Ensure Java 17 and Maven are installed and configured in system PATH.
-
-
-
-You can run tests in parallel by configuring parallel="tests" and thread-count in testng.xml.
-
-
-
-
-
-
-
-
+Java 17 and Maven must be installed and added to the system PATH
+Latest Chrome browser is supported
+WebDriverManager automatically downloads the required browser drivers
 
 Author
 
-
-
 Sanjay Kumar
-
 
 
